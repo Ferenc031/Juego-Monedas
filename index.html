@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Lanzamiento de Moneda</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<input type="number"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de Lanzamiento de Moneda</h1>
+        <form id="game-form">
+            <label for="player1-name">Nombre Jugador 1:</label>
+            <input type="text" id="player1-name" name="player1-name" required>
+            <br>
+            <label for="initial-bet-player1">Valor Inicial Jugador 1:</label>
+            <input type="number" id="initial-bet-player1" name="initial-bet-player1" min="0" value="0" required>
+            <br>
+            <label for="player2-name">Nombre Jugador 2:</label>
+            <input type="text" id="player2-name" name="player2-name" required>
+            <br>
+            <label for="initial-bet-player2">Valor Inicial Jugador 2:</label>
+            <input type="number" id="initial-bet-player2" name="initial-bet-player2" min="0" value="0" required>
+            <br>
+            <label for="bet-amount">Valor Apostado:</label>
+            <input type="number" id="bet-amount" name="bet-amount" min="0" value="0" required>
+            <br>
+            <label for="rows">No. de Lanzamientos:</label>
+            <input type="number" id="rows" name="rows" min="1" value="1" required>
+            <button type="submit">Iniciar Juego</button>
+        </form>
+        <button type="button" id="clear-table">Limpiar Tabla</button>
+        <div id="game-results">
+            <label id="results-label">Resultados:</label>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th># de turno</th>
+                        <th>Lanzamiento de moneda</th>
+                        <th>Nombre Jugador 1</th>
+                        <th>Nombre Jugador 2</th>
+                        <th>Ganador</th>
+                        <th>Puntos Jugador 1</th>
+                        <th>Puntos Jugador 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los resultados se llenarán aquí con JavaScript -->
+                </tbody>
+            </table>
+            <label id="score-label">Marcadores:</label>
+            <div id="score">
+                <label id="player1-score-label">Valor Final Jugador 1: 0</label>
+                <label id="player2-score-label">Valor Final Jugador 2: 0</label>
+                <label id="bet-amount-label">Valor Apostado: 0</label>
+                <label id="num-of-rolls-label">No. de Lanzamientos: 0</label>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
